@@ -21,10 +21,11 @@ $color-secondary-engine-gray: #75787b;
   padding: 0;
   margin: 0;
 }
-
+html {
+  font-size: 12px;
+}
 body {
   font-family: "Inter", sans-serif;
-  font-size: 12px;
 }
 
 img {
@@ -61,17 +62,17 @@ nav {
   }
   .nav-toggle-button {
     a {
-      height: 31px;
-      width: 31px;
+      height: 30px;
+      width: 30px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
 
       .line {
-        height: 3px;
+        height: 4px;
         width: 100%;
-        border-radius: 2rem;
-        background-color: red;
+        border-radius: 20px;
+        background-color: black;
       }
     }
   }
@@ -90,19 +91,41 @@ nav {
     transition: transform 1s ease-in-out;
     text-align: center;
     a {
-        display: block;
-        padding: 2em;
-        &:hover {
-            background-color: $color-secondary-engine-gray;
-            color: $color-white
-        }
+      display: block;
+      padding: 2em;
+      &:hover {
+        background-color: $color-secondary-engine-gray;
+        color: $color-white;
+      }
     }
   }
   .nav-links-active {
     transform: translateX(0);
   }
 }
+// Hero
+.hero-section {
+  margin-top: 4.5rem;
+  background-color: $color-dark-gray;
 
+  .hero-img {
+    background: url(/img/cupra-hero.png) center no-repeat;
+    background-size: cover;
+    padding: 12rem 0;
+  }
+  .hero-text {
+    color: white;
+    max-width: 64%;
+    padding: 2rem;
+    p {
+      font-size: 0.7rem;
+      opacity: 0.6;
+    }
+    h1 {
+        padding: .5rem 0 4rem 0;
+    }
+  }
+}
 .container {
   max-width: 1336px;
   margin: 0 auto;
