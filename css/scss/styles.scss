@@ -116,7 +116,7 @@ nav {
   .hero-text {
     color: white;
     max-width: 64%;
-    padding: 2rem;
+    padding: 2em;
     p {
       font-size: 0.7rem;
       opacity: 0.6;
@@ -126,30 +126,177 @@ nav {
     }
   }
 }
+// Try-out-section
+
+.try-out {
+  background-color: $color-dark-gray;
+  color: $color-white;
+  padding: 2rem;
+
+  figcaption {
+    opacity: 0.5;
+    padding: 1rem 0;
+  }
+  h2 {
+    padding: 2rem 0 1rem 0;
+  }
+  h3 {
+    padding: 2rem 0 1rem 0;
+  }
+  p {
+    opacity: 0.5;
+    width: 70%;
+    padding-bottom: 2rem;
+  }
+}
+
 // Models carousel
 .models-carousel {
   background-color: $color-light-gray;
   padding: 4rem 1rem;
-}
-.model {
-  background-color: $color-light-gray;
-  h2 {
+
+  .model {
+    background-color: $color-light-gray;
     text-align: center;
-    padding-bottom: 2rem;
-  }
-  p {
-    text-align: center;
-  }
-  .model-leasing-info {
-    padding-top: 1rem;
-    display: flex;
-    gap: 1rem;
+    h2 {
+      padding-bottom: 2rem;
+    }
+    p {
+      text-align: center;
+      color: rgba(0, 0, 0, 0.5);
+      strong {
+        color: rgba(0, 0, 0, 1);
+      }
+    }
+
+    .model-leasing-info {
+      padding-top: 3rem;
+      display: flex;
+      gap: 1rem;
+    }
   }
 }
 
+//Features section
+.features {
+  background-color: $color-dark-gray;
+  color: $color-white;
+  padding: 2rem;
+  p {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .features-hero {
+    position: relative;
+
+    h2 {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+    }
+  }
+
+  .features-text-content {
+    padding: 2rem 0;
+    h2 {
+      padding: 0 0 1rem 0;
+    }
+  }
+  .features-text-buttons {
+    padding: 0 0 3rem 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .features-carousel {
+    .nav-button {
+      top: 5% !important;
+      border-radius: 100%;
+    }
+  }
+}
+
+// Design section
+.cupra-design {
+  padding: 2rem;
+  p {
+    opacity: 0.5;
+  }
+
+  .ready-for-action {
+    color: $color-white;
+    text-align: center;
+    background-color: $color-primary-cupra-petrol;
+    padding: 4rem 1rem;
+  }
+}
+
+// Form section
+.get-offer-form {
+  background-color: $color-light-gray;
+  padding: 2rem;
+  header {
+    text-align: center;
+    p {
+      opacity: 0.5;
+      padding-bottom: 1rem;
+    }
+  }
+  .form-inputs {
+    padding: 2rem;
+    p {
+      opacity: 0.5;
+    }
+    select {
+      margin: 2rem 0;
+      width: 100%;
+      text-align: center;
+      border: 1px solid gray;
+      padding: 1rem;
+      background-color: inherit;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 0;
+    }
+    input {
+      border: none;
+      border-bottom: 1px solid gray;
+      background-color: inherit;
+    }
+  }
+  .offer-form-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    a {
+      text-decoration: underline;
+    }
+    div {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  }
+}
 .container {
   max-width: 1336px;
   margin: 0 auto;
+}
+.btn {
+  border: 1px solid red;
+  padding: 1em 2em;
+
+  &-dark {
+    background-color: $color-dark-gray;
+    color: $color-white;
+  }
+
+  &-light {
+    background-color: $color-sand;
+    color: $color-black;
+  }
 }
 
 // Owl controls
