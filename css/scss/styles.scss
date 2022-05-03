@@ -122,11 +122,53 @@ nav {
       opacity: 0.6;
     }
     h1 {
-        padding: .5rem 0 4rem 0;
+      padding: 0.5rem 0 4rem 0;
     }
   }
 }
+// Models carousel
+.models-carousel {
+  background-color: $color-light-gray;
+  padding: 4rem 1rem;
+}
+.model {
+  background-color: $color-light-gray;
+  h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  p {
+    text-align: center;
+  }
+  .model-leasing-info {
+    padding-top: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+}
+
 .container {
   max-width: 1336px;
   margin: 0 auto;
+}
+
+// Owl controls
+
+.owl-carousel {
+  .nav-button {
+    display: block;
+    width: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 50% !important;
+    transform: translateY(-50%);
+  }
+  .owl-prev {
+    // left: 35px;
+    left: 0;
+  }
+  .owl-next {
+    // right: -35px;
+    right: 0;
+  }
 }

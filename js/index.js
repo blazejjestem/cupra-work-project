@@ -2,7 +2,12 @@
 $(".owl-features").owlCarousel({
   loop: true,
   margin: 10,
+  dots: false,
   responsiveClass: true,
+  navText: [
+    "<div class='nav-button owl-prev'>‹</div>",
+    "<div class='nav-button owl-next'>›</div>",
+  ],
   responsive: {
     0: {
       items: 2,
@@ -23,7 +28,12 @@ $(".owl-features").owlCarousel({
 $(".owl-design-one").owlCarousel({
   loop: true,
   margin: 10,
+  dots: false,
   responsiveClass: true,
+  navText: [
+    "<div class='nav-button owl-prev'>‹</div>",
+    "<div class='nav-button owl-next'>›</div>",
+  ],
   responsive: {
     0: {
       items: 1,
@@ -34,8 +44,13 @@ $(".owl-design-one").owlCarousel({
 
 $(".owl-models").owlCarousel({
   loop: true,
+  dots: false,
   margin: 10,
   responsiveClass: true,
+  navText: [
+    "<div class='nav-button owl-prev'>‹</div>",
+    "<div class='nav-button owl-next'>›</div>",
+  ],
   responsive: {
     0: {
       items: 1,
@@ -80,12 +95,11 @@ function initMap() {
 
 window.initMap = initMap;
 
-
 // Navbar hamburger menu
 
-const toggleButton = document.querySelector('.nav-toggle-button')
-const navLinks = document.querySelector('.nav-links')
+const toggleButton = document.querySelector(".nav-toggle-button");
+const navLinks = document.querySelector(".nav-links");
 
-toggleButton.addEventListener('click', () => {
-    navLinks.classList.toggle('nav-links-active')
-})
+toggleButton.addEventListener("click", () => {
+  navLinks.classList.toggle("nav-links-active");
+});
