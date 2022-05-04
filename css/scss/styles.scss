@@ -40,12 +40,15 @@ h3 {
 a {
   text-decoration: none;
   color: inherit;
+  box-sizing: border-box;
 }
 
 li {
   list-style: none;
 }
-
+section {
+  padding: 2rem 0;
+}
 // Nav
 nav {
   width: 100%;
@@ -92,11 +95,16 @@ nav {
     text-align: center;
     a {
       display: block;
-      padding: 2em;
+      padding: 1em;
       &:hover {
         background-color: $color-secondary-engine-gray;
         color: $color-white;
       }
+    }
+    .btn {
+      display: inline-block;
+      width: 50%;
+      margin: 0.5em;
     }
   }
   .nav-links-active {
@@ -107,22 +115,23 @@ nav {
 .hero-section {
   margin-top: 4.5rem;
   background-color: $color-dark-gray;
-
+  padding: 0;
   .hero-img {
     background: url(/img/cupra-hero.png) center no-repeat;
     background-size: cover;
-    padding: 12rem 0;
+    padding: 17em 2em 4em 2em;
+    max-width: 1366px;
+    margin: 0 auto;
   }
   .hero-text {
     color: white;
     max-width: 64%;
-    padding: 2em;
     p {
       font-size: 0.7rem;
       opacity: 0.6;
     }
     h1 {
-      padding: 0.5rem 0 4rem 0;
+      padding: 0.5rem 0 1rem 0;
     }
   }
 }
@@ -154,7 +163,11 @@ nav {
 .models-carousel {
   background-color: $color-light-gray;
   padding: 4rem 1rem;
-
+  .owl-carousel {
+    .nav-button {
+      top: 30% !important;
+    }
+  }
   .model {
     background-color: $color-light-gray;
     text-align: center;
@@ -173,6 +186,7 @@ nav {
       padding-top: 3rem;
       display: flex;
       gap: 1rem;
+      // margin-bottom: 3rem;
     }
   }
 }
@@ -181,7 +195,7 @@ nav {
 .features {
   background-color: $color-dark-gray;
   color: $color-white;
-  padding: 2rem;
+  padding: 0 2rem;
   p {
     color: rgba(255, 255, 255, 0.5);
   }
@@ -202,7 +216,11 @@ nav {
       padding: 0 0 1rem 0;
     }
   }
+
   .features-text-buttons {
+    .btn-dark {
+      border: 1px solid white;
+    }
     padding: 0 0 3rem 0;
     display: flex;
     justify-content: space-around;
@@ -219,6 +237,7 @@ nav {
 // Design section
 .cupra-design {
   padding: 2rem;
+  background-color: #e5e5e5;
   p {
     opacity: 0.5;
   }
@@ -243,7 +262,6 @@ nav {
     }
   }
   .form-inputs {
-    padding: 2rem;
     p {
       opacity: 0.5;
     }
@@ -262,6 +280,7 @@ nav {
     }
     input {
       border: none;
+      border-radius: 0;
       border-bottom: 1px solid gray;
       background-color: inherit;
     }
@@ -270,6 +289,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-top: 2rem;
     a {
       text-decoration: underline;
     }
@@ -279,14 +299,129 @@ nav {
       gap: 1rem;
     }
   }
+  input[type="submit"] {
+    width: 100%;
+    margin: 2rem 0;
+    border-radius: 0;
+  }
+}
+
+// Available offer secition
+.available-offer {
+  padding: 2rem;
+
+  p {
+    text-align: center;
+    opacity: 0.5;
+  }
+  h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  .available-models {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    .available-model {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &-info {
+        padding: 1rem 0;
+        p {
+          text-align: left;
+          margin-bottom: 2rem;
+        }
+        .btn {
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
+
+// Individual offer
+.individual-offer {
+  margin: 0 2rem;
+  padding: 4rem;
+  color: white;
+  background-blend-mode: hue;
+  background: url(/img/cupra-salon-cta.jpg), rgba(0, 0, 0, 0.5);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  &-info {
+    p {
+      opacity: 0.5;
+    }
+  }
+}
+
+// Contact section
+.contact {
+  padding: 2rem;
+  p,
+  h2 {
+    text-align: center;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+  p {
+    opacity: 0.5;
+  }
+  .maps {
+    display: flex;
+    flex-direction: column;
+
+    #plichta-map,
+    #studio-map {
+      height: 250px;
+      width: 100%;
+    }
+    .plichta-map-section {
+      position: relative;
+      margin-bottom: 6rem;
+    }
+  }
+  .plichta-map-info {
+    position: absolute;
+    background-color: white;
+    z-index: 4;
+    bottom: -4rem;
+  }
+  .studio-map-section {
+    position: relative;
+    margin-bottom: 6rem;
+  }
+  .studio-map-info {
+    position: absolute;
+    background-color: white;
+    z-index: 4;
+    bottom: -4rem;
+  }
+}
+
+// Footer
+footer {
+  border-top: 1px solid black;
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
 }
 .container {
   max-width: 1336px;
   margin: 0 auto;
 }
 .btn {
-  border: 1px solid red;
   padding: 1em 2em;
+  margin: 2rem 0;
+  display: inline-block;
 
   &-dark {
     background-color: $color-dark-gray;
