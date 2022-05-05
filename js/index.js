@@ -1,7 +1,7 @@
 // Carousels
 $(".owl-features").owlCarousel({
   loop: true,
-  margin: 10,
+  margin: 20,
   dots: false,
   responsiveClass: true,
   navText: [
@@ -15,7 +15,7 @@ $(".owl-features").owlCarousel({
     },
     600: {
       items: 3,
-      nav: false,
+      nav: true,
     },
     1000: {
       items: 3,
@@ -45,7 +45,8 @@ $(".owl-design-one").owlCarousel({
 $(".owl-models").owlCarousel({
   loop: true,
   dots: false,
-  margin: 10,
+  margin: 20,
+  // stagePadding: 250,
   responsiveClass: true,
   navText: [
     "<div class='nav-button owl-prev'>‹</div>",

@@ -61,7 +61,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
   }
   .nav-toggle-button {
     a {
@@ -81,7 +80,7 @@ nav {
   }
   .nav-links {
     background-color: $color-light-gray;
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     top: 3.8rem;
     left: 0;
@@ -162,7 +161,7 @@ nav {
 // Models carousel
 .models-carousel {
   background-color: $color-light-gray;
-  padding: 4rem 1rem;
+  padding: 4rem 2rem 2rem 2rem;
   .owl-carousel {
     .nav-button {
       top: 30% !important;
@@ -185,8 +184,8 @@ nav {
     .model-leasing-info {
       padding-top: 3rem;
       display: flex;
+      justify-content: center;
       gap: 1rem;
-      // margin-bottom: 3rem;
     }
   }
 }
@@ -195,11 +194,13 @@ nav {
 .features {
   background-color: $color-dark-gray;
   color: $color-white;
-  padding: 0 2rem;
+  padding: 2rem 2rem;
   p {
     color: rgba(255, 255, 255, 0.5);
   }
-
+  .detail {
+    padding: 2rem 0;
+  }
   .features-hero {
     position: relative;
 
@@ -227,6 +228,9 @@ nav {
   }
 
   .features-carousel {
+    h3 {
+      padding-bottom: 1rem;
+    }
     .nav-button {
       top: 5% !important;
       border-radius: 100%;
@@ -237,12 +241,13 @@ nav {
 // Design section
 .cupra-design {
   padding: 2rem;
-  background-color: #e5e5e5;
   p {
     opacity: 0.5;
   }
 
   .ready-for-action {
+    width: 80%;
+    margin: 5rem auto;
     color: $color-white;
     text-align: center;
     background-color: $color-primary-cupra-petrol;
@@ -324,7 +329,7 @@ nav {
     gap: 1rem;
     justify-content: center;
     .available-model {
-      width: 45%;
+      width: 47%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -344,8 +349,11 @@ nav {
 
 // Individual offer
 .individual-offer {
-  margin: 0 2rem;
-  padding: 4rem;
+}
+.individual-offer-info {
+  width: 80%;
+  margin: 5rem auto;
+  padding: 4rem 1rem;
   color: white;
   background-blend-mode: hue;
   background: url(/img/cupra-salon-cta.jpg), rgba(0, 0, 0, 0.5);
@@ -417,6 +425,7 @@ footer {
 .container {
   max-width: 1336px;
   margin: 0 auto;
+  padding: 2rem;
 }
 .btn {
   padding: 1em 2em;
@@ -452,5 +461,169 @@ footer {
   .owl-next {
     // right: -35px;
     right: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 1250px) {
+  h1 {
+    font-size: 56px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  // Nav section
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: none;
+    height: auto;
+    .container {
+      display: flex;
+      align-items: center;
+      .nav-links {
+        position: static;
+        width: 100%;
+        height: auto;
+        transition: none;
+        transform: none;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        li {
+          padding: 0;
+        }
+
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+    .nav-toggle-button {
+      display: none;
+    }
+  }
+  // Hero section
+  .hero-section {
+    .hero-text {
+      width: 55%;
+      padding: 0 0 0 2rem;
+    }
+  }
+
+  // Try out section
+  .try-out {
+    &-split {
+      display: flex;
+
+      &-right {
+        margin-top: 20rem;
+      }
+    }
+  }
+
+  // Models carousel
+  .models-carousel {
+    .container {
+      .owl-carousel {
+        width: 40%;
+        margin: 0 auto;
+      }
+    }
+  }
+  // Features section
+  .features-text {
+    display: flex;
+    justify-content: space-between;
+
+    &-content {
+      width: 40%;
+    }
+
+    &-buttons {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+  }
+
+  // Design section
+
+  .design {
+    position: relative;
+    display: flex;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .design-text {
+        left: 200px;
+      }
+    }
+
+    &-text {
+      position: absolute;
+      z-index: 100;
+      background-color: $color-white;
+      width: 30%;
+      right: 200px;
+      padding: 1rem;
+    }
+
+    &-carousel {
+      width: 60%;
+    }
+  }
+
+  // Form section
+  .get-offer-form {
+    .container {
+      width: 40%;
+      margin: 0 auto;
+
+      #model {
+        display: block;
+        padding: 2rem 0;
+        width: 50%;
+        margin: 2rem auto;
+      }
+      .submit {
+        width: 50%;
+        margin: 1rem auto;
+      }
+    }
+  }
+
+  // Individual offer section
+  .individual-offer {
+    // padding: 2rem;
+  }
+
+  // Contact section
+
+  .contact {
+    .maps {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 1rem;
+
+      div {
+        width: 49%;
+      }
+
+      #studio-map,
+      #plichta-map {
+        height: 400px;
+      }
+    }
   }
 }
