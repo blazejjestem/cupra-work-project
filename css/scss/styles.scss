@@ -328,13 +328,13 @@ nav {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    padding: 2rem;
     .available-model {
       width: 47%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       &-info {
-        padding: 1rem 0;
+        padding: 1rem;
         p {
           text-align: left;
           margin-bottom: 2rem;
@@ -468,7 +468,82 @@ footer {
   h1 {
     font-size: 36px;
   }
+  // Try out section
+  .try-out {
+    &-split {
+      display: flex;
+      gap: 2rem;
+
+      &-right {
+        margin-top: 20rem;
+      }
+    }
+  }
+  // Features section
+  .features-text {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0;
+
+    &-content {
+      width: 40%;
+    }
+
+    &-buttons {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+  }
+  .get-offer-form {
+    .container {
+      width: 70%;
+      margin: 0 auto;
+
+      #model {
+        display: block;
+        padding: 2rem 0;
+        width: 50%;
+        margin: 2rem auto;
+      }
+      .submit {
+        width: 50%;
+        margin: 1rem auto;
+      }
+    }
+  }
 }
+@media screen and (min-width: 900px) {
+  .design {
+    position: relative;
+    display: flex;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .design-text {
+        left: 0;
+      }
+    }
+
+    &-text {
+      position: absolute;
+      z-index: 100;
+      background-color: $color-white;
+      width: 30%;
+      right: 0;
+      padding: 1rem;
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &-carousel {
+      width: 80%;
+    }
+  }
+}
+
 @media screen and (min-width: 1250px) {
   h1 {
     font-size: 56px;
@@ -519,39 +594,13 @@ footer {
     }
   }
 
-  // Try out section
-  .try-out {
-    &-split {
-      display: flex;
-
-      &-right {
-        margin-top: 20rem;
-      }
-    }
-  }
-
   // Models carousel
   .models-carousel {
     .container {
       .owl-carousel {
-        width: 40%;
+        width: 70%;
         margin: 0 auto;
       }
-    }
-  }
-  // Features section
-  .features-text {
-    display: flex;
-    justify-content: space-between;
-
-    &-content {
-      width: 40%;
-    }
-
-    &-buttons {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
     }
   }
 
@@ -583,30 +632,27 @@ footer {
     }
   }
 
-  // Form section
-  .get-offer-form {
-    .container {
-      width: 40%;
-      margin: 0 auto;
+  // Available offer section
 
-      #model {
-        display: block;
-        padding: 2rem 0;
-        width: 50%;
-        margin: 2rem auto;
-      }
-      .submit {
-        width: 50%;
-        margin: 1rem auto;
+  .available-offer {
+    .container {
+      .available-models {
+        margin-bottom: 10rem;
+        .available-model {
+          width: 30%;
+          position: relative;
+          margin-bottom: 18rem;
+          &-info {
+            padding: 1rem;
+            position: absolute;
+            bottom: -95%;
+            width: 90%;
+            background-color: $color-white;
+          }
+        }
       }
     }
   }
-
-  // Individual offer section
-  .individual-offer {
-    // padding: 2rem;
-  }
-
   // Contact section
 
   .contact {
